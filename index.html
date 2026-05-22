@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kornatz.de | Brillen und Contactlinsen Galerie</title>
+  <meta name="description" content="Kornatz Brillen und Contactlinsen in Berlin Moabit. Erleben Sie unsere exklusive, interaktive Brillen- & Linsengalerie mit stufenlosem 3D-Karussell.">
+  
+  <!-- Preconnect Google Fonts for faster rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Core Design System stylesheet with kornatz.de branding -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Main Gallery Interface -->
+  <main id="galleryMain">
+    <div class="carousel-container" id="carouselContainer">
+      <!-- Chevron Left -->
+      <button id="prevBtn" class="nav-btn nav-btn-left" aria-label="Zurück scrollen">
+        <svg viewBox="0 0 24 24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+
+      <!-- Horizontal Swipable Scroll Viewport -->
+      <div class="carousel-viewport" id="carouselViewport" tabIndex="0" aria-label="Kornatz Interaktives Brillen-Karussell">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Loading State (replaced dynamically by JS) -->
+          <div class="gallery-status-message" id="loadingState">
+            <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="2" x2="12" y2="6"></line>
+              <line x1="12" y1="18" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="6" y2="12"></line>
+              <line x1="18" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+            </svg>
+            <div class="status-title">Kollektionen werden geladen</div>
+            <div class="status-description">Inhabergeführt seit 1996. Wir bereiten Ihre individuelle Präsentation vor...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chevron Right -->
+      <button id="nextBtn" class="nav-btn nav-btn-right" aria-label="Vorwärts scrollen">
+        <svg viewBox="0 0 24 24">
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Bottom Controls & Navigation Progress -->
+    <div class="controls-container">
+      <div class="progress-bar-container" aria-hidden="true">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Carousel Core Interaction Script -->
+  <script src="index.js" defer></script>
+</body>
+</html>
