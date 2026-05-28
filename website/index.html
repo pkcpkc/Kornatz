@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kornatz.de | Brillen und Contactlinsen</title>
+  <meta name="description"
+    content="Kornatz Brillen und Contactlinsen in Berlin Moabit. Ihr inhabergeführter Optiker seit 1996. Erleben Sie fachkundige Beratung, präzise Augenglasbestimmung und meisterhafte Anfertigung.">
+
+  <!-- Preconnect Google Fonts for faster rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom design system stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home">
+
+  <!-- Header Navigation Area -->
+  <header>
+    <div class="container header-container">
+      <a href="#home" class="logo-link" aria-label="Kornatz.de Startseite">
+        <div class="logo-container">
+          <img class="logo-img" src="images/logo.jpg" alt="Kornatz Brillen und Contactlinsen Logo">
+          <div class="logo-banderole"><span class="logo-claim">Brillen und Contactlinsen</span></div>
+        </div>
+      </a>
+
+      <!-- CSS Checkbox Hack for Hamburger Menu -->
+      <input class="menu-btn" type="checkbox" id="menu-btn">
+      <label class="menu-icon" for="menu-btn" aria-label="Menü öffnen/schließen">
+        <span class="navicon"></span>
+      </label>
+
+      <nav class="nav-links">
+        <a href="#home" onclick="document.getElementById('menu-btn').checked = false;">Startseite</a>
+        <a href="#brillen" onclick="document.getElementById('menu-btn').checked = false;">Brillen</a>
+        <a href="#glaeser" onclick="document.getElementById('menu-btn').checked = false;">Gläser</a>
+        <a href="#sonnenschutz" onclick="document.getElementById('menu-btn').checked = false;">Sonnenbrillen</a>
+        <a href="#contactlinsen" onclick="document.getElementById('menu-btn').checked = false;">Contactlinsen</a>
+        <a href="#sehtest" onclick="document.getElementById('menu-btn').checked = false;">Sehtest</a>
+        <a href="#kontakt" onclick="document.getElementById('menu-btn').checked = false;">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Static Visual Gallery (Full-bleed breakout at very top of home page) -->
+  <div class="carousel-container" id="carouselContainer">
+    <!-- Chevron Left -->
+    <button id="prevBtn" class="nav-btn nav-btn-left" aria-label="Zurück scrollen">
+      <svg viewBox="0 0 24 24">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      </svg>
+    </button>
+
+    <!-- Horizontal Swipable Scroll Viewport -->
+    <div class="carousel-viewport" id="carouselViewport" tabIndex="0"
+      aria-label="Kornatz Interaktives Brillen-Karussell">
+      <div class="carousel-track">
+
+        <!-- ==================== SET A (Clones for left wrapping boundary) ==================== -->
+        <!-- Card 1: Lesca Lunetier -->
+        <div class="gallery-card" data-index="0" data-original="0">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: ZEISS -->
+        <div class="gallery-card" data-index="1" data-original="1">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Optiswiss -->
+        <div class="gallery-card" data-index="2" data-original="2">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Woodys Eyewear -->
+        <div class="gallery-card" data-index="3" data-original="3">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Xavier Garcia -->
+        <div class="gallery-card" data-index="4" data-original="4">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Axel S. Eyewear -->
+        <div class="gallery-card" data-index="5" data-original="5">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== SET B (Main Interactive Core Set) ==================== -->
+        <!-- Card 7: Lesca Lunetier -->
+        <div class="gallery-card" data-index="6" data-original="0">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: ZEISS -->
+        <div class="gallery-card" data-index="7" data-original="1">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: Optiswiss -->
+        <div class="gallery-card" data-index="8" data-original="2">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10: Woodys Eyewear -->
+        <div class="gallery-card" data-index="9" data-original="3">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11: Xavier Garcia -->
+        <div class="gallery-card" data-index="10" data-original="4">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12: Axel S. Eyewear -->
+        <div class="gallery-card" data-index="11" data-original="5">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== SET C (Clones for right wrapping boundary) ==================== -->
+        <!-- Card 13: Lesca Lunetier -->
+        <div class="gallery-card" data-index="12" data-original="0">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 14: ZEISS -->
+        <div class="gallery-card" data-index="13" data-original="1">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 15: Optiswiss -->
+        <div class="gallery-card" data-index="14" data-original="2">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 16: Woodys Eyewear -->
+        <div class="gallery-card" data-index="15" data-original="3">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 17: Xavier Garcia -->
+        <div class="gallery-card" data-index="16" data-original="4">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 18: Axel S. Eyewear -->
+        <div class="gallery-card" data-index="17" data-original="5">
+          <div class="card-inner">
+            <div class="card-image-wrapper">
+              <img src="brillen/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
+            </div>
+            <div class="card-caption">
+              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Chevron Right -->
+    <button id="nextBtn" class="nav-btn nav-btn-right" aria-label="Vorwärts scrollen">
+      <svg viewBox="0 0 24 24">
+        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+      </svg>
+    </button>
+
+    <!-- Bottom Controls & Scroll Progress Bar -->
+    <div class="controls-container">
+      <div class="progress-bar-container" aria-hidden="true">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hero Introduction Section -->
+  <section class="hero-section">
+    <div class="container hero-wrapper">
+      <div class="info-bar">
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">📍</div>
+          <div class="info-content">
+            <h3>Adresse</h3>
+            <p>Kirchstraße 18<br>10557 Berlin</p>
+            <p style="margin-top: 6px; font-size: 0.8rem;">
+              <a href="https://www.google.com/maps/search/?api=1&query=Kornatz+Brillen+und+Contactlinsen+Kirchstraße+18+10557+Berlin"
+                target="_blank" rel="noopener noreferrer" style="color: var(--accent-red); font-weight: 600;">
+                Auf Google Maps anzeigen &rarr;
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">⏱</div>
+          <div class="info-content">
+            <h3>Öffnungszeiten</h3>
+            <p>Mo-Fr 9:00 – 18:00 Uhr<br>Sa 10:00 – 14:00 Uhr</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">📞</div>
+          <div class="info-content">
+            <h3>Telefon</h3>
+            <p><a href="tel:0303996065">030 – 399 60 65</a></p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">✉️</div>
+          <div class="info-content">
+            <h3>E-Mail</h3>
+            <p><a href="mailto:info@kornatz.de">info@kornatz.de</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Ihre Augen sind unsere Leidenschaft.</h1>
+        <p>Wir haben unser Geschäft 1996 in der Kirchstraße errichtet. Bis heute ist viel Wasser durch die Spree
+          geflossen, aber es gibt Dinge, die sich nicht verändert haben.</p>
+        <p>Ob neue modische Brille, die Anpassung von Contactlinsen oder kompetente Augenglasbestimmung, wir beraten Sie
+          gerne, jederzeit persönlich und umfassend.</p>
+        <p>Unser Name steht für Qualität. In jede Anfertigung fließt Ihre Individualität und unser Wissen ein. Deshalb
+          fertigen wir in eigener Meisterwerkstatt. Das Ergebnis ist, dass Sie sich mit Ihrer neuen Brille und
+          Contactlinsen rundum wohlfühlen. Damit das so bleibt, sind wir selbstverständlich auch danach mit unserem
+          Service für Sie da.</p>
+        <p>Wir freuen uns auf Ihren Besuch.</p>
+        <div class="signature">
+          <p><strong>Reinhard Kornatz</strong></p>
+          <p><em>staatl. gepr. Augenoptikermeister</em></p>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="images/storefront.jpg" alt="Kornatz Brillen und Linsen Ladenfront Moabit" width="2048" height="1152"
+          loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Brillen Collection Showcase -->
+  <section id="brillen" class="bg-alt">
+    <div class="container">
+      <h1 class="section-chapter-title">Brillen</h1>
+      <div class="showcase-grid" style="margin-top: 20px;">
+        <div class="showcase-text">
+          <h2>Design oder nicht Design.</h2>
+          <p>Es gibt runde Brillen, Naturhornbrillen, dünne Brillen, farbige Brillen, Unisexbrillen, eckige Brillen,
+            Doublébrillen, dicke Brillen, historische Brillen, Titanbrillen, Faltbrillen, Kinderbrillen, Sportbrillen,
+            Goldbrillen, minimalistische Brillen, Zelluloseacetatbrillen, Designer Brillen, W-Steg Brillen, Halbbrillen,
+            Vintagebrillen, Unikatsbrillen, Nylonbrillen, Gebrauchsbrillen, Edelstahlbrillen, exclusive Brillen,
+            Schießbrillen, Vollrandbrillen, Wechselbrillen, Teilrandbrillen, Randlosbrillen...</p>
+          <p><strong>und es gibt uns. Wir beraten Sie gerne.</strong></p>
+          <p style="margin-top: 20px;">Mit unserem Videoberatungssystem können Sie aus den gleichzeitig dargestellten
+            Vorschlägen Ihren Favoriten auswählen und die Wirkung Ihrer zukünftigen Brille vergleichen.</p>
+          <p>Sie wünschen mehr Individualität? Wir lassen Ihre ganz persönliche Brille „Made in Germany“ in
+            Zelluloseacetat, 750er Gold oder Naturhorn anfertigen.</p>
+          <p><strong>Viel Spaß bei der Auswahl Ihrer neuen Brille!</strong></p>
+        </div>
+        <div class="showcase-images">
+          <div class="img-frame">
+            <img src="images/brillen_showcase1.jpg" alt="Kornatz Brillen Kollektion Nahaufnahme" width="2048"
+              height="1152" loading="lazy">
+          </div>
+          <div class="img-frame">
+            <img src="images/brillen_showcase2.webp" alt="Kornatz Brillenberatung & Details" width="819" height="1152"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section id="brands">
+    <div class="container">
+      <h2 class="align-center">Unsere Premium-Partner & Marken</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto; color: var(--text-secondary);">Wir
+        arbeiten ausschließlich mit weltweit führenden Herstellern von Brillengläsern, Contactlinsen und exklusiven
+        Brillenfassungen zusammen, um Ihnen höchste optische Präzision zu garantieren.</p>
+
+      <div class="brands-grid">
+        <div class="brand-card"><img src="images/brands/zeiss.webp" alt="ZEISS Brillengläser" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/hoya.webp" alt="Hoya Lenses" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/optiswiss.webp" alt="Optiswiss" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/hb.webp" alt="Hoffmann Natural Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/lesca.webp" alt="Lesca Lunetier" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/woodys.webp" alt="Woodys Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/x-garcia.webp" alt="Xavier Garcia" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/axel.webp" alt="Axel S Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/vanni.webp" alt="Vanni Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/booth.webp" alt="Booth & Bruce" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/reinhold.webp" alt="Reinhold Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/prague.webp" alt="Prague Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/roger.webp" alt="Roger Eyewear" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/unbenannt.webp" alt="Kornatz Partner" loading="lazy"></div>
+        <div class="brand-card"><img src="images/brands/cooper.webp" alt="CooperVision" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glasses Section (Brillengläser & Gleitsichtgläser) -->
+  <section id="glaeser" class="bg-alt">
+    <div class="container">
+      <h1 class="section-chapter-title align-center">Gläser</h1>
+      <h2 class="align-center" style="margin-top: 10px;">Brillengläser & Gleitsichttechnik</h2>
+
+      <div class="split-grid" style="margin-top: 40px;">
+        <div class="split-card">
+          <div class="split-card-img">
+            <img src="images/brillenglaeser.jpg" alt="Optiker arbeitet an präzisen Brillengläsern" loading="lazy">
+          </div>
+          <div class="split-card-content">
+            <p class="lead">Präzision vor Ihren Augen.</p>
+            <h3>Brillengläser</h3>
+            <p>Was wäre die schönste Brille ohne entsprechende Brillengläser? Leicht und schlank sollen die Gläser sein.
+              Den nahezu unsichtbaren Alleskönnern sieht man ihre Leistungsfähigkeit und den darin steckenden HighTech
+              nicht sofort an.</p>
+            <p>Ausgeklügelte Berechnungen für die besten Abbildungseigenschaften sorgen für perfekte Sehqualität. In
+              Verbindung mit mikrometergenauen Fertigungsverfahren werden hochmoderne Brillengläser hergestellt.</p>
+            <p>Die Wahl des optimal geeigneten Materials ist entscheidend für das ästhetische Aussehen, die Haltbarkeit,
+              das Gewicht... bis hin zu den leichten Pflegeeigenschaften. Schön wenn Sie sich für Qualitätsgläser
+              entscheiden, denn dann haben Sie rundum Freude an der guten Sicht.</p>
+            <p>Die aus der Brillenglasstärke, Fassungsgröße und Brillenglasmaterial resultierende Glasdicke wird von uns
+              in einer Computersimulation berechnet und optimiert. Auf Basis dieser Daten werden bei unseren Zulieferern
+              die Rohgläser angefertigt und in unserer <strong>Meisterwerkstatt</strong> präzise eingearbeitet.</p>
+          </div>
+        </div>
+
+        <div class="split-card">
+          <div class="split-card-img">
+            <img src="images/brgl.jpg" alt="Nahaufnahme von meisterhaft geschliffenen Gleitsichtgläsern" loading="lazy">
+          </div>
+          <div class="split-card-content">
+            <p class="lead">Ist Ihr Arm beim Lesen zu kurz?</p>
+            <h3>Gleitsichtgläser</h3>
+            <p>Gleitsichtgläser stellen die beste Lösung dar. Der Vorteil multifokaler Gläser liegt auf der Hand: Es
+              gibt für jede Entfernung eine passende Stärke. Es kann übergangslos jedes Objekt erkannt werden. Zudem
+              sind diese Gläser kosmetisch ansprechend und fertigungsbedingt dünner als entsprechende Bifokal- oder
+              Lesebrillengläser.</p>
+            <p>Unsere Produktpalette deckt jeden Anspruch ab. Es gibt Ausführungen, die für den Fern-/ Nahbereich, den
+              Arbeitsplatz und den Lesebereich optimiert sind.</p>
+            <p>Im Vorgespräch, und bei der sorgfältigen Augenglasbestimmung, wird zusammen mit Ihnen der abzudeckende
+              Bedarf ermittelt. Nur so kann die richtige Wahl des optimal Ihren Bedürfnissen entsprechenden
+              Gleitsichttyps getroffen werden.</p>
+            <p>Die präzise Ermittlung aller Einschleifdaten und die genaue Einarbeitung Ihrer Gläser in unserer
+              Werkstatt stellt den spontanen Seherfolg sicher. Unsere regelmäßige Teilnahme an Produktschulungen sichert
+              eine gleichbleibend hohe Qualität auf neuestem Stand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sonnenschutz Section -->
+  <section id="sonnenschutz">
+    <div class="container">
+      <h1 class="section-chapter-title">Sonnenbrillen</h1>
+      <div class="lenses-showcase" style="margin-top: 20px;">
+        <div class="lenses-text">
+          <h2>Schutz vor Ihren Augen.</h2>
+          <p>Wir brauchen das Sonnenlicht zum Leben. Dennoch wird das Auge dabei auch schädlicher UV-Strahlung
+            ausgesetzt. Gute Sonnenbrillengläser schützen zu 100%.</p>
+          <p>Je nach Einsatzbereich sind unterschiedliche Farben und Absorptionsgrade empfehlenswert. Im Citybereich ist
+            eine geringere Tönung ausreichend. An der See, im Gebirge und im Schnee ist eine bis zu &gt;90%ige Tönung
+            erforderlich. Jeder Mensch ist unterschiedlich lichtempfindlich. Deshalb empfehlen wir Ihnen unseren
+            speziellen Sehtest, mit dem der erforderliche Lichtschutz ermittelt werden kann.</p>
+          <p>Auch bei den Tönungsfarben gibt es erhebliche Unterschiede. Puristen bevorzugen Grau. Andere fühlen sich
+            mit kontrasteigernden Gläsern erst richtig wohl. Wir haben eine breit gefächerte Auswahl von Mustergläsern
+            zur Probe vorrätig. Darüber hinaus werden die vorhandenen Möglichkeiten mit Kantenfiltern und
+            Polarisationsgläsern weiter abgerundet.</p>
+        </div>
+        <div class="lenses-image-wrapper">
+          <img src="images/hoya-sonne.jpg" alt="Sonnenschutzgläser Schutz vor UV-Strahlung" loading="lazy" width="800"
+            height="533">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contactlinsen Section -->
+  <section id="contactlinsen" class="bg-alt">
+    <div class="container">
+      <h1 class="section-chapter-title">Contactlinsen</h1>
+      <div class="lenses-showcase reverse" style="margin-top: 20px;">
+        <div class="lenses-image-wrapper">
+          <img src="images/auge.jpeg" alt="Contactlinse wird auf das Auge aufgesetzt" loading="lazy" width="800"
+            height="533">
+        </div>
+        <div class="lenses-text">
+          <h2>Die unbeschwerte Freiheit.</h2>
+          <p>Wer lieber Contactlinsen als Brille trägt oder zwischendurch im Freizeitbereich und beim Sport mehr
+            Freiheit braucht, trifft bei uns auf offene Ohren.</p>
+          <p>Wir können Ihnen <strong>formstabile</strong> und <strong>weiche Contactlinsen</strong> anpassen. Dabei
+            stehen Ihnen verschiedene Systeme zur Auswahl.</p>
+          <p>Die optimale Verträglichkeit von Contactlinsen hängt von der <strong>richtigen Wahl</strong> und der
+            <strong>sorgfältigen Anpassung</strong> ab. Wir nehmen uns deshalb bei der Beratung und Beantwortung Ihrer
+            Fragen <strong>Zeit</strong>. Ebenso bringen wir Ihnen die <strong>Handhabung und Pflege</strong> bei.
+          </p>
+          <p>Sie erhalten bei uns <strong>Contactlinsen</strong> und <strong>Pflegemittel</strong> aller namhafter
+            Hersteller. Genießen Sie die unbeschwerte Freiheit beim Sport und in der Freizeit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eye Exam & Bestimmung Section -->
+  <section id="sehtest" class="bg-alt">
+    <div class="container">
+      <h1 class="section-chapter-title align-center">Sehtest</h1>
+      <div class="sehtest-intro" style="margin-top: 15px;">
+        <h2>Augenglasbestimmung</h2>
+        <p>Professionelle Augenanalyse und Refraktion vom staatlich geprüften Augenoptikermeister R. Kornatz. Erleben
+          Sie modernste Messtechnik in Berlin-Moabit.</p>
+      </div>
+
+      <div class="tests-stack">
+
+        <!-- Test 1: Seh-Check -->
+        <div class="test-item">
+          <div class="test-img-wrap">
+            <img src="images/sehcheck.jpg" alt="Schneller Sehtest / Seh-Check" loading="lazy">
+          </div>
+          <div class="test-content-wrap">
+            <p class="test-lead">5-Minuten-Test zur Orientierung</p>
+            <h3>Seh-Check</h3>
+            <p>Gutes Sehen ist Lebensqualität und dient der Sicherheit. Ihr Wohlbefinden und Ihre Leistungsfähigkeit
+              werden erheblich von den Augen beeinflusst. Eine schleichende Verringerung der Sehleistung wird oft erst
+              dann erkannt, wenn die Symptome nicht mehr geleugnet werden können (z.B. Konzentrationsmangel,
+              Abgespanntheit, verzögerte Reaktion).</p>
+            <p>Deshalb führen wir mit Ihnen einen Sehcheck durch. Völlig unkompliziert wird eine Bestandsaufnahme
+              gemacht und in Ihrem Sehpass dokumentiert. Dieser kostenlose Test dauert keine 5 Minuten und gibt Ihnen
+              Sicherheit.</p>
+          </div>
+        </div>
+
+        <!-- Test 2: Refraktion -->
+        <div class="test-item">
+          <div class="test-img-wrap">
+            <img src="images/refraktion.jpg" alt="Professionelle Refraktionsprüfung" loading="lazy">
+          </div>
+          <div class="test-content-wrap">
+            <p class="test-lead">Wir prüfen Ihr Sehen, nicht nur Ihre Augen</p>
+            <h3>Refraktion</h3>
+            <p>Unsere Augenglasbestimmung beginnt stets mit einem Gespräch über Ihre Sehforderungen und den
+              Einsatzbereich der neuen Brille oder Contactlinsen. Die Einzelprüfung Ihrer Augen stellt die bestmögliche
+              Korrektion sicher. Doch erst durch die Abstimmung beider Augen wird ein optimales, anstrengungsfreies
+              Sehen ermöglicht.</p>
+            <p>Mit speziellen Tests des „bon Multivisus ®“ bestimmen wir nicht nur Ihre Brillenglasstärke, sondern
+              überprüfen das einwandfreie Zusammenspiel beider Augen (binokulares Sehen), Ihre Naheinstellfähigkeit, das
+              Farbsehen und die dynamische Sehleistung. Mit der „ZEISS ® Präzisionsmessbrille“ können Sie die
+              ermittelten Werte sofort real ausprobieren.</p>
+          </div>
+        </div>
+
+        <!-- Test 3: Führerscheinsehtest -->
+        <div class="test-item">
+          <div class="test-img-wrap">
+            <img src="images/fuehrerscheinsehtest.png" alt="Amtlich anerkannter Führerschein-Sehtest" loading="lazy">
+          </div>
+          <div class="test-content-wrap">
+            <p class="test-lead">Amtliche Bescheinigung für Fahrschüler</p>
+            <h3>Führerscheinsehtest</h3>
+            <p>Als amtlich anerkannte Sehteststelle führen wir den Sehtest für Führerscheinbewerber/innen der Klassen A,
+              A1, A2, B, BE, AM, L und T durch. Bitte bringen Sie Ihre ggf. vorhandene Brille oder Contactlinsen mit.
+            </p>
+            <p>Zur Aushändigung der Sehtestbescheinigung ist die Vorlage eines gültigen Personalausweises oder
+              Reisepasses gesetzlich erforderlich. Die amtliche Gebühr beträgt EUR 6,45. Falls Sie vorab unverbindlich
+              Ihre Sehleistung prüfen möchten, empfehlen wir Ihnen unseren kostenlosen 5-Minuten-Seh-Check.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bottom Teaser Storefront Section (Grand Finale storefront visual) -->
+  <section id="kontakt" class="teaser-section">
+    <div class="container">
+      <h1 class="section-chapter-title align-center">Kontakt</h1>
+      <div class="sehtest-intro" style="margin-top: 15px;">
+        <h2>Kontakt und Öffnungszeiten</h2>
+      </div>
+    </div>
+    <div class="teaser-image-container">
+      <img class="teaser-img" src="images/storefront_teaser.jpg"
+        alt="Kornatz Brillen und Contactlinsen Ladenfront in Berlin-Moabit" width="1200" height="750" loading="lazy">
+
+      <!-- Horizontal Info Bar (Öffnungszeiten etc) Overlaid on bottom of image -->
+      <div class="info-bar">
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">📍</div>
+          <div class="info-content">
+            <h3>Adresse</h3>
+            <p>Kirchstraße 18<br>10557 Berlin</p>
+            <p style="margin-top: 6px; font-size: 0.8rem;">
+              <a href="https://www.google.com/maps/search/?api=1&query=Kornatz+Brillen+und+Contactlinsen+Kirchstraße+18+10557+Berlin"
+                target="_blank" rel="noopener noreferrer" style="color: var(--accent-red); font-weight: 600;">
+                Auf Google Maps anzeigen &rarr;
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">⏱</div>
+          <div class="info-content">
+            <h3>Öffnungszeiten</h3>
+            <p>Mo-Fr 9:00 – 18:00 Uhr<br>Sa 10:00 – 14:00 Uhr</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">📞</div>
+          <div class="info-content">
+            <h3>Telefon</h3>
+            <p><a href="tel:0303996065">030 – 399 60 65</a></p>
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="info-icon" aria-hidden="true">✉️</div>
+          <div class="info-content">
+            <h3>E-Mail</h3>
+            <p><a href="mailto:info@kornatz.de">info@kornatz.de</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Sticky Floating Bottom Right Viewport CTA Button -->
+  <a href="tel:0303996065" class="floating-cta" aria-label="Termin vereinbaren per Telefonanruf">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.59c0-.55-.45-1-1-1z" />
+    </svg>
+    <span>Termin vereinbaren</span>
+  </a>
+
+  <!-- Footer Area -->
+  <footer>
+    <div class="container footer-container">
+      <div class="copyright">
+        <p>&copy; 2026 Kornatz Brillen und Contactlinsen. Alle Rechte vorbehalten.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px; color: #64748b;">Inhabergeführt seit 1996 in Berlin-Moabit.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="gallery.js"></script>
+
+</body>
+
+</html>
