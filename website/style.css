@@ -1028,6 +1028,14 @@ footer {
   z-index: 2;
 }
 
+/* Dedicated styling for static info bar in hero section */
+.hero-info-bar {
+  margin-bottom: 35px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .info-box {
   background-color: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(226, 232, 240, 0.6);
@@ -1096,17 +1104,20 @@ footer {
 /* Breakpoint 2: Large Screens & Landscape - absolute transparent overlay */
 @media (min-width: 768px) {
   .info-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     background-color: rgba(255, 255, 255, 0.55); /* Elevated glassmorphic transparency */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px 24px;
     gap: 16px;
+  }
+
+  .teaser-image-container .info-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -1120,6 +1131,19 @@ footer {
   overflow: hidden;
   padding-top: 80px;
 }
+
+/* Override padding for stacked carousels below the first one */
+.carousel-container ~ .carousel-container {
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-container ~ .carousel-container {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
 
 /* Light boundary fade for pure white header and hero section background */
 .carousel-container::before,
@@ -1357,5 +1381,162 @@ footer {
   
   .nav-btn-left { left: 15px; }
   .nav-btn-right { right: 15px; }
+}
+
+/* ==========================================================================
+   TEXT PARAGRAPHS SCROLLER / SLIDER (HERO INTRO)
+   ========================================================================== */
+.text-slider-outer {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.text-slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 15px;
+}
+
+.text-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  outline: none;
+}
+
+.text-slider-viewport.grabbing {
+  cursor: grabbing;
+}
+
+.text-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.text-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.text-slide p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+/* Nav buttons styling */
+.text-nav-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.text-nav-btn:hover:not(:disabled) {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 0, 5, 0.08);
+}
+
+.text-nav-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.95);
+}
+
+.text-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  border-color: var(--border-card);
+  color: var(--text-muted);
+}
+
+.text-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Controls row (dots and mobile buttons layout) */
+.text-slider-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 5px;
+}
+
+.text-slider-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.text-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.text-indicator-dot.active {
+  background: var(--accent-red);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Mobile vs Desktop Layout rules */
+.text-nav-btn-side {
+  display: none; /* Hidden on mobile by default */
+}
+
+.text-nav-btn-inline {
+  display: flex; /* Shown inline on mobile */
+  width: 38px;
+  height: 38px;
+}
+
+@media (max-width: 767px) {
+  .text-slider-controls-row {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-nav-btn-side {
+    display: flex; /* Shown on desktop */
+  }
+  
+  .text-nav-btn-inline {
+    display: none; /* Hidden in controls row on desktop */
+  }
+  
+  .text-slider-controls-row {
+    justify-content: center;
+  }
+  
+  .text-slide {
+    padding: 0 20px;
+  }
 }
 
