@@ -49,6 +49,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px; /* Offset the 80px fixed header */
 }
 
 a {

@@ -15,7 +15,6 @@ class GlassesGallery extends HTMLElement {
           width: 100%;
           margin: 0 0 0 0;
           overflow: hidden;
-          padding-top: 80px;
         }
 
         /* Light boundary fade for pure white header and hero section background */
@@ -220,7 +219,7 @@ class GlassesGallery extends HTMLElement {
 
         @media (max-width: 768px) {
           .carousel-container {
-            padding: 80px 0 10px 0;
+            padding: 0 0 10px 0;
             margin-top: 15px;
           }
           
@@ -335,7 +334,8 @@ class GlassesGallery extends HTMLElement {
 
     const createCardNode = (cardEl, index, originalIndex) => {
       const src = cardEl.getAttribute('src') || '';
-      const label = cardEl.getAttribute('label') || '';
+      const labelText = cardEl.textContent.trim() || cardEl.getAttribute('label') || '';
+      const labelHTML = cardEl.innerHTML.trim() || cardEl.getAttribute('label') || '';
       
       const cardDiv = document.createElement('div');
       cardDiv.className = 'gallery-card';
@@ -345,10 +345,10 @@ class GlassesGallery extends HTMLElement {
       cardDiv.innerHTML = `
         <div class="card-inner">
           <div class="card-image-wrapper">
-            <img src="${src}" alt="${label}" loading="lazy">
+            <img src="${src}" alt="${labelText.replace(/"/g, '&quot;')}" loading="lazy">
           </div>
           <div class="card-caption">
-            <h3>${label}</h3>
+            <h3>${labelHTML}</h3>
           </div>
         </div>
       `;
@@ -891,10 +891,10 @@ class TextSlider extends HTMLElement {
     // Clear track and populate slides
     this.track.innerHTML = '';
     slides.forEach((slideEl) => {
-      const text = slideEl.getAttribute('label') || slideEl.getAttribute('text') || slideEl.innerHTML;
+      const text = slideEl.innerHTML.trim() || slideEl.getAttribute('label') || slideEl.getAttribute('text') || '';
       const slideDiv = document.createElement('div');
       slideDiv.className = 'text-slide';
-      slideDiv.innerHTML = text.trim();
+      slideDiv.innerHTML = text;
       this.track.appendChild(slideDiv);
     });
 
