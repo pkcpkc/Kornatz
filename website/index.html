@@ -8,13 +8,6 @@
   <meta name="description"
     content="Kornatz Brillen und Contactlinsen in Berlin Moabit. Ihr inhabergeführter Optiker seit 1996. Erleben Sie fachkundige Beratung, präzise Augenglasbestimmung und meisterhafte Anfertigung.">
 
-  <!-- Preconnect Google Fonts for faster rendering -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
   <!-- Custom design system stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -49,471 +42,14 @@
     </div>
   </header>
 
-  <!-- Static Visual Gallery (Full-bleed breakout at very top of home page) -->
-  <div class="carousel-container" id="carouselContainer">
-    <!-- Chevron Left -->
-    <button id="prevBtn" class="nav-btn nav-btn-left" aria-label="Zurück scrollen">
-      <svg viewBox="0 0 24 24">
-        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-      </svg>
-    </button>
-
-    <!-- Horizontal Swipable Scroll Viewport -->
-    <div class="carousel-viewport" id="carouselViewport" tabIndex="0"
-      aria-label="Kornatz Interaktives Brillen-Karussell">
-      <div class="carousel-track">
-
-        <!-- ==================== SET A (Clones for left wrapping boundary) ==================== -->
-        <!-- Card 1: Lesca Lunetier -->
-        <div class="gallery-card" data-index="0" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: ZEISS -->
-        <div class="gallery-card" data-index="1" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Optiswiss -->
-        <div class="gallery-card" data-index="2" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Woodys Eyewear -->
-        <div class="gallery-card" data-index="3" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: Xavier Garcia -->
-        <div class="gallery-card" data-index="4" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: Axel S. Eyewear -->
-        <div class="gallery-card" data-index="5" data-original="5">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== SET B (Main Interactive Core Set) ==================== -->
-        <!-- Card 7: Lesca Lunetier -->
-        <div class="gallery-card" data-index="6" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8: ZEISS -->
-        <div class="gallery-card" data-index="7" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 9: Optiswiss -->
-        <div class="gallery-card" data-index="8" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 10: Woodys Eyewear -->
-        <div class="gallery-card" data-index="9" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 11: Xavier Garcia -->
-        <div class="gallery-card" data-index="10" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 12: Axel S. Eyewear -->
-        <div class="gallery-card" data-index="11" data-original="5">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== SET C (Clones for right wrapping boundary) ==================== -->
-        <!-- Card 13: Lesca Lunetier -->
-        <div class="gallery-card" data-index="12" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/lesca.jpg" alt="Lesca Lunetier Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Lesca Lunetier – Französischer Vintage-Chic seit 1964</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 14: ZEISS -->
-        <div class="gallery-card" data-index="13" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/zeiss.jpg" alt="ZEISS Brillenglas-Technologie" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>ZEISS – Absolute Präzision für höchsten Sehkomfort</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 15: Optiswiss -->
-        <div class="gallery-card" data-index="14" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/optiswiss.jpg" alt="Optiswiss Schweizer Gläser" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Optiswiss – Schweizer Qualitätsgläser seit 1917</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 16: Woodys Eyewear -->
-        <div class="gallery-card" data-index="15" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/woodies.jpg" alt="Woodys Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 17: Xavier Garcia -->
-        <div class="gallery-card" data-index="16" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/xavier-garcia.jpg" alt="Xavier Garcia Designerbrille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Xavier Garcia – Expressive Formen und mediterraner Charakter</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 18: Axel S. Eyewear -->
-        <div class="gallery-card" data-index="17" data-original="5">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/storefront/axel-s.jpg" alt="Axel S. Eyewear Brille" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Axel S. – Farbenfrohe Extravaganz und Acetat-Design</h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Chevron Right -->
-    <button id="nextBtn" class="nav-btn nav-btn-right" aria-label="Vorwärts scrollen">
-      <svg viewBox="0 0 24 24">
-        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-      </svg>
-    </button>
-
-    <!-- Bottom Controls & Scroll Progress Bar -->
-    <div class="controls-container">
-      <div class="progress-bar-container" aria-hidden="true">
-        <div class="progress-bar-fill" id="progressBarFill"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- Second Glasses Gallery (Performer TTR) -->
-  <div class="carousel-container">
-    <!-- Chevron Left -->
-    <button class="nav-btn nav-btn-left" aria-label="Zurück scrollen">
-      <svg viewBox="0 0 24 24">
-        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-      </svg>
-    </button>
-
-    <!-- Horizontal Swipable Scroll Viewport -->
-    <div class="carousel-viewport" tabIndex="0"
-      aria-label="Performer TTR Interaktives Brillen-Karussell">
-      <div class="carousel-track">
-
-        <!-- ==================== SET A (Clones for left wrapping boundary) ==================== -->
-        <!-- Card 1: Performer TTR Model TTR.200 -->
-        <div class="gallery-card" data-index="0" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-200-thumb.jpg" alt="Performer TTR - Model TTR.200" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.200</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Performer TTR Model TTR.201 -->
-        <div class="gallery-card" data-index="1" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-201-thumb.jpg" alt="Performer TTR - Model TTR.201" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.201</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Performer TTR Model TTR.310 -->
-        <div class="gallery-card" data-index="2" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-310-thumb.jpg" alt="Performer TTR - Model TTR.310" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.310</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Performer TTR Model TTR.620 -->
-        <div class="gallery-card" data-index="3" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-620-thumb.jpg" alt="Performer TTR - Model TTR.620" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.620</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: Performer TTR Model TTR.801 -->
-        <div class="gallery-card" data-index="4" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-801-thumb.jpg" alt="Performer TTR - Model TTR.801" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.801</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== SET B (Main Interactive Core Set) ==================== -->
-        <!-- Card 6: Performer TTR Model TTR.200 -->
-        <div class="gallery-card" data-index="5" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-200-thumb.jpg" alt="Performer TTR - Model TTR.200" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.200</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7: Performer TTR Model TTR.201 -->
-        <div class="gallery-card" data-index="6" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-201-thumb.jpg" alt="Performer TTR - Model TTR.201" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.201</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 8: Performer TTR Model TTR.310 -->
-        <div class="gallery-card" data-index="7" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-310-thumb.jpg" alt="Performer TTR - Model TTR.310" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.310</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 9: Performer TTR Model TTR.620 -->
-        <div class="gallery-card" data-index="8" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-620-thumb.jpg" alt="Performer TTR - Model TTR.620" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.620</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 10: Performer TTR Model TTR.801 -->
-        <div class="gallery-card" data-index="9" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-801-thumb.jpg" alt="Performer TTR - Model TTR.801" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.801</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== SET C (Clones for right wrapping boundary) ==================== -->
-        <!-- Card 11: Performer TTR Model TTR.200 -->
-        <div class="gallery-card" data-index="10" data-original="0">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-200-thumb.jpg" alt="Performer TTR - Model TTR.200" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.200</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 12: Performer TTR Model TTR.201 -->
-        <div class="gallery-card" data-index="11" data-original="1">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-201-thumb.jpg" alt="Performer TTR - Model TTR.201" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.201</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 13: Performer TTR Model TTR.310 -->
-        <div class="gallery-card" data-index="12" data-original="2">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-310-thumb.jpg" alt="Performer TTR - Model TTR.310" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.310</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 14: Performer TTR Model TTR.620 -->
-        <div class="gallery-card" data-index="13" data-original="3">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-620-thumb.jpg" alt="Performer TTR - Model TTR.620" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.620</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 15: Performer TTR Model TTR.801 -->
-        <div class="gallery-card" data-index="14" data-original="4">
-          <div class="card-inner">
-            <div class="card-image-wrapper">
-              <img src="brillen/performer-ttr/TTR-801-thumb.jpg" alt="Performer TTR - Model TTR.801" loading="lazy">
-            </div>
-            <div class="card-caption">
-              <h3>Performer TTR - Model TTR.801</h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Chevron Right -->
-    <button class="nav-btn nav-btn-right" aria-label="Vorwärts scrollen">
-      <svg viewBox="0 0 24 24">
-        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-      </svg>
-    </button>
-
-    <!-- Bottom Controls & Scroll Progress Bar -->
-    <div class="controls-container">
-      <div class="progress-bar-container" aria-hidden="true">
-        <div class="progress-bar-fill"></div>
-      </div>
-    </div>
-  </div>
+  <glasses-gallery aria-label="Performer TTR Interaktives Brillen-Karussell">
+    <card src="brillen/performer-ttr/TTR-200-thumb.jpg" label="Performer TTR - Model TTR.200"></card>
+    <card src="brillen/performer-ttr/TTR-201-thumb.jpg" label="Performer TTR - Model TTR.201"></card>
+    <card src="brillen/performer-ttr/TTR-310-thumb.jpg" label="Performer TTR - Model TTR.310"></card>
+    <card src="brillen/performer-ttr/TTR-620-thumb.jpg" label="Performer TTR - Model TTR.620"></card>
+    <card src="brillen/performer-ttr/TTR-801-thumb.jpg" label="Performer TTR - Model TTR.801"></card>
+  </glasses-gallery>
 
 
   <!-- Hero Introduction Section -->
@@ -559,63 +95,12 @@
         <div class="hero-text">
         <h1>Ihre Augen sind unsere Leidenschaft.</h1>
         
-        <div class="text-slider-outer">
-          <div class="text-slider-container">
-            <!-- Left Side Button (Desktop only) -->
-            <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-              <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-              </svg>
-            </button>
-            
-            <!-- Viewport containing track -->
-            <div class="text-slider-viewport" id="textSliderViewport" tabindex="0" aria-label="Textabschnitte Karussell">
-              <div class="text-slider-track" id="textSliderTrack">
-                <div class="text-slide">
-                  <p>Wir haben unser Geschäft 1996 in der Kirchstraße errichtet. Bis heute ist viel Wasser durch die Spree geflossen, aber es gibt Dinge, die sich nicht verändert haben.</p>
-                </div>
-                <div class="text-slide">
-                  <p>Ob neue modische Brille, die Anpassung von Contactlinsen oder kompetente Augenglasbestimmung, wir beraten Sie gerne, jederzeit persönlich und umfassend.</p>
-                </div>
-                <div class="text-slide">
-                  <p>Unser Name steht für Qualität. In jede Anfertigung fließt Ihre Individualität und unser Wissen ein. Deshalb fertigen wir in eigener Meisterwerkstatt. Das Ergebnis ist, dass Sie sich mit Ihrer neuen Brille und Contactlinsen rundum wohlfühlen. Damit das so bleibt, sind wir selbstverständlich auch danach mit unserem Service für Sie da.</p>
-                </div>
-                <div class="text-slide">
-                  <p>Wir freuen uns auf Ihren Besuch.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Right Side Button (Desktop only) -->
-            <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-              <svg viewBox="0 0 24 24">
-                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-              </svg>
-            </button>
-          </div>
-          
-          <!-- Bottom row: inline buttons flanking the indicators -->
-          <div class="text-slider-controls-row">
-            <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-              <svg viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-              </svg>
-            </button>
-            
-            <div class="text-slider-indicators">
-              <span class="text-indicator-dot active" data-index="0"></span>
-              <span class="text-indicator-dot" data-index="1"></span>
-              <span class="text-indicator-dot" data-index="2"></span>
-              <span class="text-indicator-dot" data-index="3"></span>
-            </div>
-            
-            <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-              <svg viewBox="0 0 24 24">
-                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <text-slider>
+          <slide label="Wir haben unser Geschäft 1996 in der Kirchstraße errichtet. Bis heute ist viel Wasser durch die Spree geflossen, aber es gibt Dinge, die sich nicht verändert haben."></slide>
+          <slide label="Ob neue modische Brille, die Anpassung von Contactlinsen oder kompetente Augenglasbestimmung, wir beraten Sie gerne, jederzeit persönlich und umfassend."></slide>
+          <slide label="Unser Name steht für Qualität. In jede Anfertigung fließt Ihre Individualität und unser Wissen ein. Deshalb fertigen wir in eigener Meisterwerkstatt. Das Ergebnis ist, dass Sie sich mit Ihrer neuen Brille und Contactlinsen rundum wohlfühlen. Damit das so bleibt, sind wir selbstverständlich auch danach mit unserem Service für Sie da."></slide>
+          <slide label="Wir freuen uns auf Ihren Besuch."></slide>
+        </text-slider>
 
         <div class="signature">
           <p><strong>Reinhard Kornatz</strong></p>
@@ -630,6 +115,7 @@
     </div>
   </section>
 
+
   <!-- Brillen Collection Showcase -->
   <section id="brillen" class="bg-alt">
     <div class="container">
@@ -638,59 +124,13 @@
         <div class="showcase-text">
           <h2>Design oder nicht Design.</h2>
           
-          <div class="text-slider-outer">
-            <div class="text-slider-container">
-              <!-- Left Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <!-- Viewport containing track -->
-              <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                <div class="text-slider-track">
-                  <div class="text-slide">
-                    <p>Es gibt runde Brillen, Naturhornbrillen, dünne Brillen, farbige Brillen, Unisexbrillen, eckige Brillen, Doublébrillen, dicke Brillen, historische Brillen, Titanbrillen, Faltbrillen, Kinderbrillen, Sportbrillen, Goldbrillen, minimalistische Brillen, Zelluloseacetatbrillen, Designer Brillen, W-Steg Brillen, Halbbrillen, Vintagebrillen, Unikatsbrillen, Nylonbrillen, Gebrauchsbrillen, Edelstahlbrillen, exclusive Brillen, Schießbrillen, Vollrandbrillen, Wechselbrillen, Teilrandbrillen, Randlosbrillen...</p>
-                  </div>
-                  <div class="text-slide">
-                    <p><strong>und es gibt uns. Wir beraten Sie gerne.</strong></p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Mit unserem Videoberatungssystem können Sie aus den gleichzeitig dargestellten Vorschlägen Ihren Favoriten auswählen und die Wirkung Ihrer zukünftigen Brille vergleichen.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Sie wünschen mehr Individualität? Wir lassen Ihre ganz persönliche Brille „Made in Germany“ in Zelluloseacetat, 750er Gold oder Naturhorn anfertigen.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p><strong>Viel Spaß bei der Auswahl Ihrer neuen Brille!</strong></p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Right Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-            
-            <!-- Bottom row: inline buttons flanking the indicators -->
-            <div class="text-slider-controls-row">
-              <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <div class="text-slider-indicators">
-                <span class="text-indicator-dot active" data-index="0"></span>
-                <span class="text-indicator-dot" data-index="1"></span>
-                <span class="text-indicator-dot" data-index="2"></span>
-                <span class="text-indicator-dot" data-index="3"></span>
-                <span class="text-indicator-dot" data-index="4"></span>
-              </div>
-              
-              <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-          </div>
+          <text-slider>
+            <slide label="Es gibt runde Brillen, Naturhornbrillen, dünne Brillen, farbige Brillen, Unisexbrillen, eckige Brillen, Doublébrillen, dicke Brillen, historische Brillen, Titanbrillen, Faltbrillen, Kinderbrillen, Sportbrillen, Goldbrillen, minimalistische Brillen, Zelluloseacetatbrillen, Designer Brillen, W-Steg Brillen, Halbbrillen, Vintagebrillen, Unikatsbrillen, Nylonbrillen, Gebrauchsbrillen, Edelstahlbrillen, exclusive Brillen, Schießbrillen, Vollrandbrillen, Wechselbrillen, Teilrandbrillen, Randlosbrillen..."></slide>
+            <slide label="&lt;strong&gt;und es gibt uns. Wir beraten Sie gerne.&lt;/strong&gt;"></slide>
+            <slide label="Mit unserem Videoberatungssystem können Sie aus den gleichzeitig dargestellten Vorschlägen Ihren Favoriten auswählen und die Wirkung Ihrer zukünftigen Brille vergleichen."></slide>
+            <slide label="Sie wünschen mehr Individualität? Wir lassen Ihre ganz persönliche Brille „Made in Germany“ in Zelluloseacetat, 750er Gold oder Naturhorn anfertigen."></slide>
+            <slide label="&lt;strong&gt;Viel Spaß bei der Auswahl Ihrer neuen Brille!&lt;/strong&gt;"></slide>
+          </text-slider>
         </div>
         <div class="showcase-images">
           <div class="img-frame">
@@ -705,6 +145,16 @@
       </div>
     </div>
   </section>
+
+  <!-- Static Visual Gallery (Full-bleed breakout at very top of home page) -->
+  <glasses-gallery id="carouselContainer" aria-label="Kornatz Interaktives Brillen-Karussell">
+    <card src="brillen/storefront/lesca.jpg" label="Lesca Lunetier – Französischer Vintage-Chic seit 1964"></card>
+    <card src="brillen/storefront/zeiss.jpg" label="ZEISS – Absolute Präzision für höchsten Sehkomfort"></card>
+    <card src="brillen/storefront/optiswiss.jpg" label="Optiswiss – Schweizer Qualitätsgläser seit 1917"></card>
+    <card src="brillen/storefront/woodies.jpg" label="Woodys Eyewear – Detailverliebter Farbakzent aus Barcelona"></card>
+    <card src="brillen/storefront/xavier-garcia.jpg" label="Xavier Garcia – Expressive Formen und mediterraner Charakter"></card>
+    <card src="brillen/storefront/axel-s.jpg" label="Axel S. – Farbenfrohe Extravaganz und Acetat-Design"></card>
+  </glasses-gallery>
 
   <!-- Brands Section -->
   <section id="brands">
@@ -749,55 +199,12 @@
             <p class="lead">Präzision vor Ihren Augen.</p>
             <h3>Brillengläser</h3>
             
-            <div class="text-slider-outer">
-              <div class="text-slider-container">
-                <!-- Left Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <!-- Viewport containing track -->
-                <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                  <div class="text-slider-track">
-                    <div class="text-slide">
-                      <p>Was wäre die schönste Brille ohne entsprechende Brillengläser? Leicht und schlank sollen die Gläser sein. Den nahezu unsichtbaren Alleskönnern sieht man ihre Leistungsfähigkeit und den darin steckenden HighTech nicht sofort an.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Ausgeklügelte Berechnungen für die besten Abbildungseigenschaften sorgen für perfekte Sehqualität. In Verbindung mit mikrometergenauen Fertigungsverfahren werden hochmoderne Brillengläser hergestellt.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Die Wahl des optimal geeigneten Materials ist entscheidend für das ästhetische Aussehen, die Haltbarkeit, das Gewicht... bis hin zu den leichten Pflegeeigenschaften. Schön wenn Sie sich für Qualitätsgläser entscheiden, denn dann haben Sie rundum Freude an der guten Sicht.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Die aus der Brillenglasstärke, Fassungsgröße und Brillenglasmaterial resultierende Glasdicke wird von uns in einer Computersimulation berechnet und optimiert. Auf Basis dieser Daten werden bei unseren Zulieferern die Rohgläser angefertigt und in unserer <strong>Meisterwerkstatt</strong> präzise eingearbeitet.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Right Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-              
-              <!-- Bottom row: inline buttons flanking the indicators -->
-              <div class="text-slider-controls-row">
-                <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <div class="text-slider-indicators">
-                  <span class="text-indicator-dot active" data-index="0"></span>
-                  <span class="text-indicator-dot" data-index="1"></span>
-                  <span class="text-indicator-dot" data-index="2"></span>
-                  <span class="text-indicator-dot" data-index="3"></span>
-                </div>
-                
-                <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-            </div>
+            <text-slider>
+              <slide label="Was wäre die schönste Brille ohne entsprechende Brillengläser? Leicht und schlank sollen die Gläser sein. Den nahezu unsichtbaren Alleskönnern sieht man ihre Leistungsfähigkeit und den darin steckenden HighTech nicht sofort an."></slide>
+              <slide label="Ausgeklügelte Berechnungen für die besten Abbildungseigenschaften sorgen für perfekte Sehqualität. In Verbindung mit mikrometergenauen Fertigungsverfahren werden hochmoderne Brillengläser hergestellt."></slide>
+              <slide label="Die Wahl des optimal geeigneten Materials ist entscheidend für das ästhetische Aussehen, die Haltbarkeit, das Gewicht... bis hin zu den leichten Pflegeeigenschaften. Schön wenn Sie sich für Qualitätsgläser entscheiden, denn dann haben Sie rundum Freude an der guten Sicht."></slide>
+              <slide label="Die aus der Brillenglasstärke, Fassungsgröße und Brillenglasmaterial resultierende Glasdicke wird von uns in einer Computersimulation berechnet und optimiert. Auf Basis dieser Daten werden bei unseren Zulieferern die Rohgläser angefertigt und in unserer &lt;strong&gt;Meisterwerkstatt&lt;/strong&gt; präzise eingearbeitet."></slide>
+            </text-slider>
           </div>
         </div>
 
@@ -809,55 +216,12 @@
             <p class="lead">Ist Ihr Arm beim Lesen zu kurz?</p>
             <h3>Gleitsichtgläser</h3>
             
-            <div class="text-slider-outer">
-              <div class="text-slider-container">
-                <!-- Left Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <!-- Viewport containing track -->
-                <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                  <div class="text-slider-track">
-                    <div class="text-slide">
-                      <p>Gleitsichtgläser stellen die beste Lösung dar. Der Vorteil multifokaler Gläser liegt auf der Hand: Es gibt für jede Entfernung eine passende Stärke. Es kann übergangslos jedes Objekt erkannt werden. Zudem sind diese Gläser kosmetisch ansprechend und fertigungsbedingt dünner als entsprechende Bifokal- oder Lesebrillengläser.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Unsere Produktpalette deckt jeden Anspruch ab. Es gibt Ausführungen, die für den Fern-/ Nahbereich, den Arbeitsplatz und den Lesebereich optimiert sind.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Im Vorgespräch, und bei der sorgfältigen Augenglasbestimmung, wird zusammen mit Ihnen der abzudeckende Bedarf ermittelt. Nur so kann die richtige Wahl des optimal Ihren Bedürfnissen entsprechenden Gleitsichttyps getroffen werden.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Die präzise Ermittlung aller Einschleifdaten und die genaue Einarbeitung Ihrer Gläser in unserer Werkstatt stellt den spontanen Seherfolg sicher. Unsere regelmäßige Teilnahme an Produktschulungen sichert eine gleichbleibend hohe Qualität auf neuestem Stand.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Right Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-              
-              <!-- Bottom row: inline buttons flanking the indicators -->
-              <div class="text-slider-controls-row">
-                <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <div class="text-slider-indicators">
-                  <span class="text-indicator-dot active" data-index="0"></span>
-                  <span class="text-indicator-dot" data-index="1"></span>
-                  <span class="text-indicator-dot" data-index="2"></span>
-                  <span class="text-indicator-dot" data-index="3"></span>
-                </div>
-                
-                <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-            </div>
+            <text-slider>
+              <slide label="Gleitsichtgläser stellen die beste Lösung dar. Der Vorteil multifokaler Gläser liegt auf der Hand: Es gibt für jede Entfernung eine passende Stärke. Es kann übergangslos jedes Objekt erkannt werden. Zudem sind diese Gläser kosmetisch ansprechend und fertigungsbedingt dünner als entsprechende Bifokal- oder Lesebrillengläser."></slide>
+              <slide label="Unsere Produktpalette deckt jeden Anspruch ab. Es gibt Ausführungen, die für den Fern-/ Nahbereich, den Arbeitsplatz und den Lesebereich optimiert sind."></slide>
+              <slide label="Im Vorgespräch, und bei der sorgfältigen Augenglasbestimmung, wird zusammen mit Ihnen der abzudeckende Bedarf ermittelt. Nur so kann die richtige Wahl des optimal Ihren Bedürfnissen entsprechenden Gleitsichttyps getroffen werden."></slide>
+              <slide label="Die präzise Ermittlung aller Einschleifdaten und die genaue Einarbeitung Ihrer Gläser in unserer Werkstatt stellt den spontanen Seherfolg sicher. Unsere regelmäßige Teilnahme an Produktschulungen sichert eine gleichbleibend hohe Qualität auf neuestem Stand."></slide>
+            </text-slider>
           </div>
         </div>
       </div>
@@ -872,51 +236,11 @@
         <div class="lenses-text">
           <h2>Schutz vor Ihren Augen.</h2>
           
-          <div class="text-slider-outer">
-            <div class="text-slider-container">
-              <!-- Left Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <!-- Viewport containing track -->
-              <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                <div class="text-slider-track">
-                  <div class="text-slide">
-                    <p>Wir brauchen das Sonnenlicht zum Leben. Dennoch wird das Auge dabei auch schädlicher UV-Strahlung ausgesetzt. Gute Sonnenbrillengläser schützen zu 100%.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Je nach Einsatzbereich sind unterschiedliche Farben und Absorptionsgrade empfehlenswert. Im Citybereich ist eine geringere Tönung ausreichend. An der See, im Gebirge und im Schnee ist eine bis zu &gt;90%ige Tönung erforderlich. Jeder Mensch ist unterschiedlich lichtempfindlich. Deshalb empfehlen wir Ihnen unseren speziellen Sehtest, mit dem der erforderliche Lichtschutz ermittelt werden kann.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Auch bei den Tönungsfarben gibt es erhebliche Unterschiede. Puristen bevorzugen Grau. Andere fühlen sich mit kontrasteigernden Gläsern erst richtig wohl. Wir haben eine breit gefächerte Auswahl von Mustergläsern zur Probe vorrätig. Darüber hinaus werden die vorhandenen Möglichkeiten mit Kantenfiltern und Polarisationsgläsern weiter abgerundet.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Right Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-            
-            <!-- Bottom row: inline buttons flanking the indicators -->
-            <div class="text-slider-controls-row">
-              <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <div class="text-slider-indicators">
-                <span class="text-indicator-dot active" data-index="0"></span>
-                <span class="text-indicator-dot" data-index="1"></span>
-                <span class="text-indicator-dot" data-index="2"></span>
-              </div>
-              
-              <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-          </div>
+          <text-slider>
+            <slide label="Wir brauchen das Sonnenlicht zum Leben. Dennoch wird das Auge dabei auch schädlicher UV-Strahlung ausgesetzt. Gute Sonnenbrillengläser schützen zu 100%."></slide>
+            <slide label="Je nach Einsatzbereich sind unterschiedliche Farben und Absorptionsgrade empfehlenswert. Im Citybereich ist eine geringere Tönung ausreichend. An der See, im Gebirge und im Schnee ist eine bis zu &gt;90%ige Tönung erforderlich. Jeder Mensch ist unterschiedlich lichtempfindlich. Deshalb empfehlen wir Ihnen unseren speziellen Sehtest, mit dem der erforderliche Lichtschutz ermittelt werden kann."></slide>
+            <slide label="Auch bei den Tönungsfarben gibt es erhebliche Unterschiede. Puristen bevorzugen Grau. Andere fühlen sich mit kontrasteigernden Gläsern erst richtig wohl. Wir haben eine breit gefächerte Auswahl von Mustergläsern zur Probe vorrätig. Darüber hinaus werden die vorhandenen Möglichkeiten mit Kantenfiltern und Polarisationsgläsern weiter abgerundet."></slide>
+          </text-slider>
         </div>
         <div class="lenses-image-wrapper">
           <img src="images/hoya-sonne.jpg" alt="Sonnenschutzgläser Schutz vor UV-Strahlung" loading="lazy" width="800"
@@ -938,55 +262,12 @@
         <div class="lenses-text">
           <h2>Die unbeschwerte Freiheit.</h2>
           
-          <div class="text-slider-outer">
-            <div class="text-slider-container">
-              <!-- Left Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <!-- Viewport containing track -->
-              <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                <div class="text-slider-track">
-                  <div class="text-slide">
-                    <p>Wer lieber Contactlinsen als Brille trägt oder zwischendurch im Freizeitbereich und beim Sport mehr Freiheit braucht, trifft bei uns auf offene Ohren.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Wir können Ihnen <strong>formstabile</strong> und <strong>weiche Contactlinsen</strong> anpassen. Dabei stehen Ihnen verschiedene Systeme zur Auswahl.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Die optimale Verträglichkeit von Contactlinsen hängt von der <strong>richtigen Wahl</strong> und der <strong>sorgfältigen Anpassung</strong> ab. Wir nehmen uns deshalb bei der Beratung und Beantwortung Ihrer Fragen <strong>Zeit</strong>. Ebenso bringen wir Ihnen die <strong>Handhabung und Pflege</strong> bei.</p>
-                  </div>
-                  <div class="text-slide">
-                    <p>Sie erhalten bei uns <strong>Contactlinsen</strong> und <strong>Pflegemittel</strong> aller namhafter Hersteller. Genießen Sie die unbeschwerte Freiheit beim Sport und in der Freizeit.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Right Side Button (Desktop only) -->
-              <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-            
-            <!-- Bottom row: inline buttons flanking the indicators -->
-            <div class="text-slider-controls-row">
-              <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-              </button>
-              
-              <div class="text-slider-indicators">
-                <span class="text-indicator-dot active" data-index="0"></span>
-                <span class="text-indicator-dot" data-index="1"></span>
-                <span class="text-indicator-dot" data-index="2"></span>
-                <span class="text-indicator-dot" data-index="3"></span>
-              </div>
-              
-              <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-              </button>
-            </div>
-          </div>
+          <text-slider>
+            <slide label="Wer lieber Contactlinsen als Brille trägt oder zwischendurch im Freizeitbereich und beim Sport mehr Freiheit braucht, trifft bei uns auf offene Ohren."></slide>
+            <slide label="Wir können Ihnen &lt;strong&gt;formstabile&lt;/strong&gt; und &lt;strong&gt;weiche Contactlinsen&lt;/strong&gt; anpassen. Dabei stehen Ihnen verschiedene Systeme zur Auswahl."></slide>
+            <slide label="Die optimale Verträglichkeit von Contactlinsen hängt von der &lt;strong&gt;richtigen Wahl&lt;/strong&gt; und der &lt;strong&gt;sorgfältigen Anpassung&lt;/strong&gt; ab. Wir nehmen uns deshalb bei der Beratung und Beantwortung Ihrer Fragen &lt;strong&gt;Zeit&lt;/strong&gt;. Ebenso bringen wir Ihnen die &lt;strong&gt;Handhabung und Pflege&lt;/strong&gt; bei."></slide>
+            <slide label="Sie erhalten bei uns &lt;strong&gt;Contactlinsen&lt;/strong&gt; und &lt;strong&gt;Pflegemittel&lt;/strong&gt; aller namhafter Hersteller. Genießen Sie die unbeschwerte Freiheit beim Sport und in der Freizeit."></slide>
+          </text-slider>
         </div>
       </div>
     </div>
@@ -1013,47 +294,10 @@
             <p class="test-lead">5-Minuten-Test zur Orientierung</p>
             <h3>Seh-Check</h3>
             
-            <div class="text-slider-outer">
-              <div class="text-slider-container">
-                <!-- Left Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <!-- Viewport containing track -->
-                <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                  <div class="text-slider-track">
-                    <div class="text-slide">
-                      <p>Gutes Sehen ist Lebensqualität und dient der Sicherheit. Ihr Wohlbefinden und Ihre Leistungsfähigkeit werden erheblich von den Augen beeinflusst. Eine schleichende Verringerung der Sehleistung wird oft erst dann erkannt, wenn die Symptome nicht mehr geleugnet werden können (z.B. Konzentrationsmangel, Abgespanntheit, verzögerte Reaktion).</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Deshalb führen wir mit Ihnen einen Sehcheck durch. Völlig unkompliziert wird eine Bestandsaufnahme gemacht und in Ihrem Sehpass dokumentiert. Dieser kostenlose Test dauert keine 5 Minuten und gibt Ihnen Sicherheit.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Right Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-              
-              <!-- Bottom row: inline buttons flanking the indicators -->
-              <div class="text-slider-controls-row">
-                <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <div class="text-slider-indicators">
-                  <span class="text-indicator-dot active" data-index="0"></span>
-                  <span class="text-indicator-dot" data-index="1"></span>
-                </div>
-                
-                <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-            </div>
+            <text-slider>
+              <slide label="Gutes Sehen ist Lebensqualität und dient der Sicherheit. Ihr Wohlbefinden und Ihre Leistungsfähigkeit werden erheblich von den Augen beeinflusst. Eine schleichende Verringerung der Sehleistung wird oft erst dann erkannt, wenn die Symptome nicht mehr geleugnet werden können (z.B. Konzentrationsmangel, Abgespanntheit, verzögerte Reaktion)."></slide>
+              <slide label="Deshalb führen wir mit Ihnen einen Sehcheck durch. Völlig unkompliziert wird eine Bestandsaufnahme gemacht und in Ihrem Sehpass dokumentiert. Dieser kostenlose Test dauert keine 5 Minuten und gibt Ihnen Sicherheit."></slide>
+            </text-slider>
           </div>
         </div>
 
@@ -1066,47 +310,10 @@
             <p class="test-lead">Wir prüfen Ihr Sehen, nicht nur Ihre Augen</p>
             <h3>Refraktion</h3>
             
-            <div class="text-slider-outer">
-              <div class="text-slider-container">
-                <!-- Left Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <!-- Viewport containing track -->
-                <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                  <div class="text-slider-track">
-                    <div class="text-slide">
-                      <p>Unsere Augenglasbestimmung beginnt stets mit einem Gespräch über Ihre Sehforderungen und den Einsatzbereich der neuen Brille oder Contactlinsen. Die Einzelprüfung Ihrer Augen stellt die bestmögliche Korrektion sicher. Doch erst durch die Abstimmung beider Augen wird ein optimales, anstrengungsfreies Sehen ermöglicht.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Mit speziellen Tests des „bon Multivisus ®“ bestimmen wir nicht nur Ihre Brillenglasstärke, sondern überprüfen das einwandfreie Zusammenspiel beider Augen (binokulares Sehen), Ihre Naheinstellfähigkeit, das Farbsehen und die dynamische Sehleistung. Mit der „ZEISS ® Präzisionsmessbrille“ können Sie die ermittelten Werte sofort real ausprobieren.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Right Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-              
-              <!-- Bottom row: inline buttons flanking the indicators -->
-              <div class="text-slider-controls-row">
-                <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <div class="text-slider-indicators">
-                  <span class="text-indicator-dot active" data-index="0"></span>
-                  <span class="text-indicator-dot" data-index="1"></span>
-                </div>
-                
-                <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-            </div>
+            <text-slider>
+              <slide label="Unsere Augenglasbestimmung beginnt stets mit einem Gespräch über Ihre Sehforderungen und den Einsatzbereich der neuen Brille oder Contactlinsen. Die Einzelprüfung Ihrer Augen stellt die bestmögliche Korrektion sicher. Doch erst durch die Abstimmung beider Augen wird ein optimales, anstrengungsfreies Sehen ermöglicht."></slide>
+              <slide label="Mit speziellen Tests des „bon Multivisus ®“ bestimmen wir nicht nur Ihre Brillenglasstärke, sondern überprüfen das einwandfreie Zusammenspiel beider Augen (binokulares Sehen), Ihre Naheinstellfähigkeit, das Farbsehen und die dynamische Sehleistung. Mit der „ZEISS ® Präzisionsmessbrille“ können Sie die ermittelten Werte sofort real ausprobieren."></slide>
+            </text-slider>
           </div>
         </div>
 
@@ -1119,47 +326,10 @@
             <p class="test-lead">Amtliche Bescheinigung für Fahrschüler</p>
             <h3>Führerscheinsehtest</h3>
             
-            <div class="text-slider-outer">
-              <div class="text-slider-container">
-                <!-- Left Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <!-- Viewport containing track -->
-                <div class="text-slider-viewport" tabindex="0" aria-label="Textabschnitte Karussell">
-                  <div class="text-slider-track">
-                    <div class="text-slide">
-                      <p>Als amtlich anerkannte Sehteststelle führen wir den Sehtest für Führerscheinbewerber/innen der Klassen A, A1, A2, B, BE, AM, L und T durch. Bitte bringen Sie Ihre ggf. vorhandene Brille oder Contactlinsen mit.</p>
-                    </div>
-                    <div class="text-slide">
-                      <p>Zur Aushändigung der Sehtestbescheinigung ist die Vorlage eines gültigen Personalausweises oder Reisepasses gesetzlich erforderlich. Die amtliche Gebühr beträgt EUR 6,45. Falls Sie vorab unverbindlich Ihre Sehleistung prüfen möchten, empfehlen wir Ihnen unseren kostenlosen 5-Minuten-Seh-Check.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Right Side Button (Desktop only) -->
-                <button class="text-nav-btn text-nav-btn-side text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-              
-              <!-- Bottom row: inline buttons flanking the indicators -->
-              <div class="text-slider-controls-row">
-                <button class="text-nav-btn text-nav-btn-inline text-prev-btn" aria-label="Vorheriger Absatz" disabled>
-                  <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
-                </button>
-                
-                <div class="text-slider-indicators">
-                  <span class="text-indicator-dot active" data-index="0"></span>
-                  <span class="text-indicator-dot" data-index="1"></span>
-                </div>
-                
-                <button class="text-nav-btn text-nav-btn-inline text-next-btn" aria-label="Nächster Absatz">
-                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" /></svg>
-                </button>
-              </div>
-            </div>
+            <text-slider>
+              <slide label="Als amtlich anerkannte Sehteststelle führen wir den Sehtest für Führerscheinbewerber/innen der Klassen A, A1, A2, B, BE, AM, L und T durch. Bitte bringen Sie Ihre ggf. vorhandene Brille oder Contactlinsen mit."></slide>
+              <slide label="Zur Aushändigung der Sehtestbescheinigung ist die Vorlage eines gültigen Personalausweises oder Reisepasses gesetzlich erforderlich. Die amtliche Gebühr beträgt EUR 6,45. Falls Sie vorab unverbindlich Ihre Sehleistung prüfen möchten, empfehlen wir Ihnen unseren kostenlosen 5-Minuten-Seh-Check."></slide>
+            </text-slider>
           </div>
         </div>
 
