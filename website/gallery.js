@@ -100,7 +100,7 @@ class GlassesGallery extends HTMLElement {
 
         .card-image-wrapper {
           width: 100%;
-          height: 100%;
+          flex: 1;
           position: relative;
           overflow: hidden;
           background: #f8fafc;
@@ -113,17 +113,16 @@ class GlassesGallery extends HTMLElement {
           pointer-events: none;
         }
 
-        /* Premium Translucent Gradient Caption Overlay */
+        /* Premium Caption below the image */
         .card-caption {
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          position: relative;
           width: 100%;
-          padding: 40px 24px 20px 24px;
-          background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 60%, transparent 100%);
+          padding: 16px 20px;
+          background: var(--bg-card);
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
+          justify-content: center;
+          box-sizing: border-box;
           pointer-events: none;
           z-index: 2;
         }
@@ -131,11 +130,11 @@ class GlassesGallery extends HTMLElement {
         .card-caption h3 {
           font-family: var(--font-display);
           font-weight: 700;
-          font-size: 1.1rem;
+          font-size: 1.05rem;
           letter-spacing: -0.1px;
-          color: #ffffff;
-          line-height: 1.3;
-          text-shadow: 0 1px 3px rgba(15, 23, 42, 0.5);
+          color: var(--text-primary);
+          line-height: 1.4;
+          margin-top: 0; /* Remove default margin-top */
           margin-bottom: 0; /* Override default margin */
         }
 
@@ -239,7 +238,7 @@ class GlassesGallery extends HTMLElement {
           }
           
           .card-caption {
-            padding: 30px 18px 12px 18px;
+            padding: 12px 16px;
           }
           
           .card-caption h3 {
@@ -320,6 +319,15 @@ class GlassesGallery extends HTMLElement {
     }
   }
 
+  getScrollLeft() {
+    return this.preciseScrollLeft !== undefined ? this.preciseScrollLeft : this.viewport.scrollLeft;
+  }
+
+  setScrollLeft(val) {
+    this.preciseScrollLeft = val;
+    this.viewport.scrollLeft = Math.round(val);
+  }
+
   initGallery() {
     const originalCardElements = Array.from(this.querySelectorAll('card')).filter(el => {
       return el.closest('glasses-gallery') === this;
@@ -386,6 +394,10 @@ class GlassesGallery extends HTMLElement {
   setupEvents() {
     // Scroll listener for wrapping & highlights
     this.viewport.addEventListener('scroll', () => {
+      const currentScroll = this.viewport.scrollLeft;
+      if (this.preciseScrollLeft === undefined || Math.abs(currentScroll - this.preciseScrollLeft) > 1.5) {
+        this.preciseScrollLeft = currentScroll;
+      }
       this.handleBoundaryWrapping();
       this.updateCardEffects();
     });
@@ -415,7 +427,7 @@ class GlassesGallery extends HTMLElement {
       this.pauseAutoScrollTimer();
       this.state.targetCard = null;
       if (e.deltaY !== 0) {
-        this.viewport.scrollLeft += (e.deltaY * 0.8);
+        this.setScrollLeft(this.getScrollLeft() + e.deltaY * 0.8);
       }
     }, { passive: true });
 
@@ -454,7 +466,7 @@ class GlassesGallery extends HTMLElement {
   }
 
   handleBoundaryWrapping() {
-    const scrollLeft = this.viewport.scrollLeft;
+    const scrollLeft = this.getScrollLeft();
     const cards = this.cards;
     const itemCount = this.itemCount;
 
@@ -467,7 +479,7 @@ class GlassesGallery extends HTMLElement {
     const viewportCenterOffset = (this.viewport.offsetWidth - firstItemB.offsetWidth) / 2;
 
     if (scrollLeft >= (firstItemC.offsetLeft - viewportCenterOffset)) {
-      this.viewport.scrollLeft = scrollLeft - setWidth;
+      this.setScrollLeft(scrollLeft - setWidth);
       if (this.state.targetCard) {
         const currentIndex = cards.indexOf(this.state.targetCard);
         if (currentIndex !== -1) {
@@ -475,7 +487,7 @@ class GlassesGallery extends HTMLElement {
         }
       }
     } else if (scrollLeft <= (firstItemB.offsetLeft - setWidth - viewportCenterOffset)) {
-      this.viewport.scrollLeft = scrollLeft + setWidth;
+      this.setScrollLeft(scrollLeft + setWidth);
       if (this.state.targetCard) {
         const currentIndex = cards.indexOf(this.state.targetCard);
         if (currentIndex !== -1) {
@@ -486,7 +498,7 @@ class GlassesGallery extends HTMLElement {
   }
 
   updateCardEffects() {
-    const scrollLeft = this.viewport.scrollLeft;
+    const scrollLeft = this.getScrollLeft();
     const viewportCenter = scrollLeft + this.viewport.offsetWidth / 2;
     const cards = this.cards;
     const itemCount = this.itemCount;
@@ -518,7 +530,7 @@ class GlassesGallery extends HTMLElement {
     const firstItemB = this.cards[this.itemCount];
     if (!firstItemB) return;
     const viewportCenterOffset = (this.viewport.offsetWidth - firstItemB.offsetWidth) / 2;
-    this.viewport.scrollLeft = firstItemB.offsetLeft - viewportCenterOffset;
+    this.setScrollLeft(firstItemB.offsetLeft - viewportCenterOffset);
   }
 
   startAnimationLoop() {
@@ -530,7 +542,7 @@ class GlassesGallery extends HTMLElement {
       this.state.currentAutoScrollSpeed += (targetSpeed - this.state.currentAutoScrollSpeed) * 0.12;
 
       if (Math.abs(this.state.currentAutoScrollSpeed) > 0.005) {
-        this.viewport.scrollLeft += this.state.currentAutoScrollSpeed;
+        this.setScrollLeft(this.getScrollLeft() + this.state.currentAutoScrollSpeed);
       }
       requestAnimationFrame(tick);
     };
@@ -555,7 +567,7 @@ class GlassesGallery extends HTMLElement {
 
     const pageX = e.pageX || (e.touches && e.touches[0].pageX);
     this.state.startX = pageX - this.viewport.offsetLeft;
-    this.state.scrollLeftStart = this.viewport.scrollLeft;
+    this.state.scrollLeftStart = this.getScrollLeft();
 
     this.state.lastEventX = pageX;
     this.state.lastEventTime = performance.now();
@@ -580,7 +592,7 @@ class GlassesGallery extends HTMLElement {
 
     const currentX = pageX - this.viewport.offsetLeft;
     const walk = (currentX - this.state.startX) * this.config.dragMultiplier;
-    this.viewport.scrollLeft = this.state.scrollLeftStart - walk;
+    this.setScrollLeft(this.state.scrollLeftStart - walk);
 
     const currentTime = performance.now();
     const deltaTime = currentTime - this.state.lastEventTime;
@@ -612,7 +624,7 @@ class GlassesGallery extends HTMLElement {
     let currentVelocity = initialVelocity;
     const decayLoop = () => {
       if (this.state.isDragging) return;
-      this.viewport.scrollLeft -= currentVelocity;
+      this.setScrollLeft(this.getScrollLeft() - currentVelocity);
       currentVelocity *= this.config.inertiaFriction;
 
       if (Math.abs(currentVelocity) > 0.05) {
@@ -634,7 +646,7 @@ class GlassesGallery extends HTMLElement {
     const cards = this.cards;
     if (!cards || cards.length === 0) return null;
 
-    const viewportCenter = this.viewport.scrollLeft + this.viewport.offsetWidth / 2;
+    const viewportCenter = this.getScrollLeft() + this.viewport.offsetWidth / 2;
     let closestCard = null;
     let minDistance = Infinity;
 
