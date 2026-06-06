@@ -21,8 +21,8 @@
   --accent-blue: #2ea3f2;
   
   /* Typography */
-  --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
   /* Layout */
   --max-width: 1140px;
@@ -995,6 +995,7 @@ footer {
   padding: 20px 0 40px 0;
   border-bottom: 1px solid #e2e8f0;
   background-color: var(--bg-light);
+  scroll-margin-top: 75px;
 }
 
 /* Container acts as card context; holds the image and overlaid info bar */

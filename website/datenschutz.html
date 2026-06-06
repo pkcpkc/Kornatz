@@ -13,11 +13,6 @@
   <link rel="icon" href="images/icon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/icon.png">
   
-  <!-- Preconnect Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
   <!-- Custom design system stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,21 +27,21 @@
           <div class="logo-banderole"><span class="logo-claim">Brillen und Contactlinsen</span></div>
         </div>
       </a>
-      
+
       <!-- CSS Checkbox Hack for Hamburger Menu -->
       <input class="menu-btn" type="checkbox" id="menu-btn">
       <label class="menu-icon" for="menu-btn" aria-label="Menü öffnen/schließen">
         <span class="navicon"></span>
       </label>
-      
+
       <nav class="nav-links">
-        <a href="index.html#home">Startseite</a>
-        <a href="index.html#brillen">Brillen</a>
-        <a href="index.html#glaeser">Gläser</a>
-        <a href="index.html#sonnenschutz">Sonnenschutz</a>
-        <a href="index.html#contactlinsen">Contactlinsen</a>
-        <a href="index.html#sehtest">Sehtest</a>
-        <a href="index.html#kontakt">Kontakt & Öffnungszeiten</a>
+        <a href="index.html#home" onclick="document.getElementById('menu-btn').checked = false;">Startseite</a>
+        <a href="index.html#brillen" onclick="document.getElementById('menu-btn').checked = false;">Brillen</a>
+        <a href="index.html#glaeser" onclick="document.getElementById('menu-btn').checked = false;">Gläser</a>
+        <a href="index.html#sonnenschutz" onclick="document.getElementById('menu-btn').checked = false;">Sonnenbrillen</a>
+        <a href="index.html#contactlinsen" onclick="document.getElementById('menu-btn').checked = false;">Contactlinsen</a>
+        <a href="index.html#sehtest" onclick="document.getElementById('menu-btn').checked = false;">Sehtest</a>
+        <a href="index.html#kontakt" onclick="document.getElementById('menu-btn').checked = false;">Kontakt & Öffnungszeiten</a>
       </nav>
     </div>
   </header>
