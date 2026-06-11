@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 80px; /* Offset the 80px fixed header */
+  overflow-x: hidden; /* Prevent horizontal scrolling/swiping page offset */
 }
 
 a {
@@ -281,12 +283,16 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px; /* Slightly tighter gap to support standard screen heights */
   z-index: 101;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto; /* Enable vertical scroll if needed */
+  -webkit-overflow-scrolling: touch; /* Momentum scrolling on iOS */
+  padding: 90px 20px 40px 20px; /* Leave space for header logo/hamburger */
+  box-sizing: border-box;
 }
 
 .nav-links a {
@@ -320,6 +326,19 @@ header {
 .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
   bottom: 0;
+}
+
+/* Tighter navigation overlay for short viewports (landscape mobile) to prevent overflow */
+@media (max-height: 480px) and (max-width: 1023px) {
+  .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+  }
 }
 
 /* ==========================================================================
@@ -845,29 +864,7 @@ footer {
     scroll-margin-top: 5px; /* Offset sticky header (80px) and align headline 15px below bottom of header */
   }
   
-  /* Desktop Header and Menu */
-  .menu-icon {
-    display: none;
-  }
   
-  .nav-links {
-    position: static;
-    height: auto;
-    width: auto;
-    background-color: transparent;
-    opacity: 1;
-    visibility: visible;
-    flex-direction: row;
-    gap: 30px;
-    transform: none;
-  }
-  
-  .nav-links a {
-    font-size: 0.95rem;
-    letter-spacing: 0.2px;
-    font-weight: 600;
-    transition: color 0.25s ease;
-  }
 
   /* Hero split columns */
   .hero-wrapper {
@@ -985,6 +982,35 @@ footer {
     right: 32px;
     padding: 16px 36px;
     font-size: 1rem;
+  }
+}
+
+/* Desktop Header and Menu Breakpoint (>= 1024px) */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+  
+  .nav-links {
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    gap: 30px;
+    transform: none;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: auto;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    transition: color 0.25s ease;
   }
 }
 
